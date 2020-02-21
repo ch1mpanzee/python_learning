@@ -1,54 +1,54 @@
-# import sys
+import sys
 
-# def is_iterable(param):
-#     try:
-#         iter(param)
-#         return True
-#     except:
-#         return False
-
-
-# params = [
-#     1234,
-#     '1234',
-#     [1, 2, 3, 4],
-#     set([1, 2, 3, 4]),
-#     {1: 1, 2: 2, 3: 3, 4: 4},
-#     (1, 2, 3, 4)
-# ]
-
-# for param in params:
-#     print('{} is iterable: {}'.format(param, is_iterable(param)))
+def is_iterable(param):
+    try:
+        iter(param)
+        return True
+    except:
+        return False
 
 
-# iterator_1 = [i for i in range(1000)]
-# generator_1 = (i for i in range(1000))
+params = [
+    1234,
+    '1234',
+    [1, 2, 3, 4],
+    set([1, 2, 3, 4]),
+    {1: 1, 2: 2, 3: 3, 4: 4},
+    (1, 2, 3, 4)
+]
 
-# print(iterator_1)
-# # 生成器调用next()时，才会生成下一个元素
-# print(next(generator_1))
-# print(next(generator_1))
+for param in params:
+    print('{} is iterable: {}'.format(param, is_iterable(param)))
 
-# # 迭代是Python最强大的功能之一，是访问集合元素的一种方式
-# # 迭代器可以记住遍历的位置，它有两个方法：iter() 和 next()
-# l1 = [1, 2, 3, 4]
-# iter1 = iter(l1)  # 创建迭代器对象
-# print(next(iter1))  # 输出迭代器的第一个元素
-# print(next(iter1))
 
-# # 用for语句对迭代器对象进行遍历
-# iter2 = iter(l1)
-# for i in iter2:
-#     print(i, end='')
+iterator_1 = [i for i in range(1000)]
+generator_1 = (i for i in range(1000))
 
-# # 用next()对迭代器对象进行遍历
-# iter3 = iter(l1)
-# while True:
-#     try:
-#         print(next(iter3))
-#     except StopIteration:
-#         # 调用后会引发SystemExit异常
-#         sys.exit(0)
+print(iterator_1)
+# 生成器调用next()时，才会生成下一个元素
+print(next(generator_1))
+print(next(generator_1))
+
+# 迭代是Python最强大的功能之一，是访问集合元素的一种方式
+# 迭代器可以记住遍历的位置，它有两个方法：iter() 和 next()
+l1 = [1, 2, 3, 4]
+iter1 = iter(l1)  # 创建迭代器对象
+print(next(iter1))  # 输出迭代器的第一个元素
+print(next(iter1))
+
+# 用for语句对迭代器对象进行遍历
+iter2 = iter(l1)
+for i in iter2:
+    print(i, end='')
+
+# 用next()对迭代器对象进行遍历
+iter3 = iter(l1)
+while True:
+    try:
+        print(next(iter3))
+    except StopIteration:
+        # 调用后会引发SystemExit异常
+        sys.exit(0)
 
 # 创建一个迭代器
 class myNumbers():
