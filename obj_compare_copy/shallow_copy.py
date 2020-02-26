@@ -80,3 +80,40 @@ l5[1] += (50, 60)
 print('l5 returns {}'.format(l5))
 print('l6 returns {}'.format(l6))
 
+
+import copy
+a = 1  # 不可变数据类型
+copy_a = copy.copy(a)
+print(id(a)==id(copy_a))  # 内存地址相同
+
+a = [1,2]  # 可变数据类型
+copy_a = copy.copy(a)
+print(id(a)==id(copy_a))  # 内存地址不相同
+print(id(a[0])==id(copy_a[0]))
+
+a = ([1,2],(3,4))  # 不可变数据类型
+copy_a = copy.copy(a)
+print(id(a)==id(copy_a))  
+print(id(a[0])==id(copy_a[0]))  
+print(id(a[1])==id(copy_a[1]))  
+
+a = ((1,2),(3,4))  # 不可变数据类型
+copy_a = copy.copy(a)
+print(id(a)==id(copy_a))  
+print(id(a[0])==id(copy_a[0]))  
+print(id(a[1])==id(copy_a[1]))  
+
+a = [(1,2),[3,4]]  # 可变数据类型
+copy_a = copy.copy(a)
+print(id(a)==id(copy_a))  
+print(id(a[0])==id(copy_a[0]))  
+print(id(a[1])==id(copy_a[1]))  
+
+a = [(1,2),(3,4)]  # 可变数据类型
+copy_a = copy.copy(a)
+print(id(a)==id(copy_a))  
+print(id(a[0])==id(copy_a[0]))  
+print(id(a[1])==id(copy_a[1]))  
+
+# 浅拷贝，如果外层是不可变对象，则原对象与拷贝对象地址相同，内部元素无论可变与否地址都相同
+# 如果外层是可变对象，则原对象与拷贝对象地址不同，内部元素无论可变与否地址都相同

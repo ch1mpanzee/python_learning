@@ -41,32 +41,32 @@ print('y returns {}'.format(y))
 
 
 import copy
-# a = 1  # 不可变数据类型
-# copy_a = copy.deepcopy(a)
-# print(id(a)==id(copy_a))  
+a = 1  # 不可变数据类型
+copy_a = copy.deepcopy(a)
+print(id(a)==id(copy_a))  
 
-# a = [1,2]  # 可变数据类型
-# copy_a = copy.deepcopy(a)
-# print(id(a)==id(copy_a))  
-# print(id(a[0])==id(copy_a[0]))
+a = [1,2]  # 可变数据类型
+copy_a = copy.deepcopy(a)
+print(id(a)==id(copy_a))  
+print(id(a[0])==id(copy_a[0]))
 
-# a = ([1,2],(3,4))  # 不可变数据类型
-# copy_a = copy.deepcopy(a)
-# print(id(a)==id(copy_a))  
-# print(id(a[0])==id(copy_a[0]))
-# print(id(a[1])==id(copy_a[1]))
+a = ([1,2],(3,4))  # 不可变数据类型
+copy_a = copy.deepcopy(a)
+print(id(a)==id(copy_a))  
+print(id(a[0])==id(copy_a[0]))
+print(id(a[1])==id(copy_a[1]))
 
-# a = ((1,2),(3,4))  # 不可变数据类型
-# copy_a = copy.deepcopy(a)
-# print(id(a)==id(copy_a))  
-# print(id(a[0])==id(copy_a[0]))
-# print(id(a[1])==id(copy_a[1]))
+a = ((1,2),(3,4))  # 不可变数据类型
+copy_a = copy.deepcopy(a)
+print(id(a)==id(copy_a))  
+print(id(a[0])==id(copy_a[0]))
+print(id(a[1])==id(copy_a[1]))
 
-# a = [(1,2),[3,4]]  # 可变数据类型
-# copy_a = copy.deepcopy(a)
-# print(id(a)==id(copy_a))  
-# print(id(a[0])==id(copy_a[0]))  
-# print(id(a[1])==id(copy_a[1]))  
+a = [(1,2),[3,4]]  # 可变数据类型
+copy_a = copy.deepcopy(a)
+print(id(a)==id(copy_a))  
+print(id(a[0])==id(copy_a[0]))  
+print(id(a[1])==id(copy_a[1]))  
 
 a = [(1,2),(3,4)]  # 可变数据类型
 copy_a = copy.deepcopy(a)
