@@ -1,7 +1,7 @@
 ## Python3 线程中常用的两个模块为：
-1. _thread
+### _thread
     + _thread 提供了低级别的、原始的线程以及一个简单的锁，它相比于 threading 模块的功能还是比较有限的。
-2. threading(推荐使用)
+### threading(推荐使用)
     + threading 模块除了包含 _thread 模块中的所有方法外，还提供的其他方法：
         - threading.currentThread(): 返回当前的线程变量。
         - threading.enumerate(): 返回一个包含正在运行的线程的list。正在运行指线程启动后、结束前，不包括启动前和终止后的线程。
@@ -14,6 +14,7 @@
         - getName(): 返回线程名。
         - setName(): 设置线程名。
 
+### remark
 thread 模块已被废弃。用户可以使用 threading 模块代替。
 在 Python3 中不能再使用"thread" 模块。为了兼容性，Python3 将 thread 重命名为 "_thread"。
 
