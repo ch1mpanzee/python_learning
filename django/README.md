@@ -1,16 +1,19 @@
 ## ref
 https://www.runoob.com/django/django-first-app.html
 
+
 ## install
 ```
 pip3 install Django==3.0.3
 ```
+
 
 ## check in python env
 ```
 import django
 django.get_version()
 ```
+
 
 ## first django project
 安装Django后，我们可以使用管理工具 django-admin 来创建 HelloWorld 项目：
@@ -42,9 +45,13 @@ HelloWorld目录结构如下：
 ```
 python3 manage.py runserver 0.0.0.0:8000
 ```
+
 0.0.0.0 让其它电脑可连接到开发服务器，8000 为端口号。如果不说明，那么端口号默认为 8000。
 
 在浏览器输入你服务器的 ip（这里我们输入本机 IP 地址： 127.0.0.1:8000） 及端口号
+
+
+
 
 
 ## urls.py 文件中的 path() 函数
@@ -52,6 +59,8 @@ Django path() 可以接收四个参数，分别是两个必选参数：route、v
 ```
 path(route, view, kwargs=None, name=None)
 ```
+
+
 - route: 字符串，表示 URL 规则，与之匹配的 URL 会执行对应的第二个参数 view。
 - view: 用于执行与正则表达式匹配的 URL 请求。
 - kwargs: 视图使用的字典类型的参数。
