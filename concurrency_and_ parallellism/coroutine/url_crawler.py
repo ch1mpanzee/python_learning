@@ -2,7 +2,7 @@
 
 import time
 
-
+# 用同步接口写了个同步代码
 def crawl_page(url):
     print('Crawling {}'.format(url))
     sleep_time = int(url.split('_')[-1])
@@ -25,6 +25,7 @@ print('Crawl {} urls in {} seconds'.format(len(urls), end_time - start_time))
 
 import asyncio
 
+# 用异步接口写了个同步代码
 async def crawl_page(url):
     print('crawling {}'.format(url))
     sleep_time = int(url.split('_')[-1])
@@ -44,7 +45,7 @@ end_time = time.perf_counter()
 print('Crawl {} urls in {} seconds'.format(len(urls), end_time - start_time))
 
 
-
+# 用异步接口写了个异步代码
 async def crawl_page(url):
     print('crawling {}'.format(url))
     sleep_time = int(url.split('_')[-1])
@@ -63,7 +64,7 @@ end_time = time.perf_counter()
 print('Crawl {} urls in {} seconds'.format(len(urls), end_time - start_time))
 
 
-
+# 用异步接口写了个异步代码
 async def crawl_page(url):
     print('crawling {}'.format(url))
     sleep_time = int(url.split('_')[-1])
